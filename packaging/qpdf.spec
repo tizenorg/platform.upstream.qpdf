@@ -8,10 +8,8 @@ License: Artistic
 Group: System Environment/Libraries
 URL: http://qpdf.sourceforge.net/
 Source: %{name}-%{version}.tar.gz
-Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: zlib-devel
-BuildRequires: libpcre-devel
-#BuildRequires: pcre
+BuildRequires: pkgconfig(zlib)
+BuildRequires: pkgconfig(libpcre)
 
 %description
 QPDF is a program that does structural, content-preserving
