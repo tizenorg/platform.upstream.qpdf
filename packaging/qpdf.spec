@@ -59,13 +59,14 @@ rm -rf %{buildroot}/%{_datadir}/doc/qpdf
 %docs_package
 
 %files
-%manifest qpdf.manifest
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license Artistic-2.0 
 %exclude %{_bindir}/*
 %{_libdir}/libqpdf*.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libqpdf*.so
