@@ -1,6 +1,8 @@
+%define _unpackaged_files_terminate_build 0
+
 Name:           qpdf
-Version:        3.0.2
-Release:        0
+Version:        3.0.2_3
+Release:        1
 License:        Artistic-2.0
 Summary:        Command-line tools and library for transforming PDF files
 Url:            http://qpdf.sourceforge.net/
@@ -52,22 +54,22 @@ make check
 %install
 %make_install
 rm -rf %{buildroot}/%{_datadir}/doc/qpdf
+
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{buildsubdir}/Artistic-2.0 %{buildroot}/usr/share/license/%{name}
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
 
-%docs_package
-
 %files
 %manifest %{name}.manifest
-%defattr(-,root,root)
-%license Artistic-2.0 
+/usr/share/license/%{name}
 %exclude %{_bindir}/*
+%exclude %{_mandir}/man1/*
 %{_libdir}/libqpdf*.so.*
 
 %files devel
 %manifest %{name}.manifest
-%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libqpdf*.so
 %{_libdir}/pkgconfig/*.pc

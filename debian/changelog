@@ -1,0 +1,23 @@
+qpdf (3.0.2_3) unstable; urgency=low
+
+  * Sync with private and rsa
+  * Git: external/qpdf
+  * Tag: qpdf_3.0.2_3
+
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Wed, 07 Aug 2013 15:39:24 +0900
+
+qpdf (3.0.2-2slp2) unstable; urgency=low
+
+  * Added spec file and smack manifest file
+  * Git: external/qpdf
+  * Tag: qpdf_3.0.2-2slp2
+
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Fri, 14 Dec 2012 14:00:01 +0900
+
+qpdf (3.0.2-1slp2) unstable; urgency=low
+
+  * Ported qpdf initially
+  * Git: external/qpdf
+  * Tag: qpdf_3.0.2-1slp2
+
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Fri, 14 Dec 2012 13:57:51 +0900
