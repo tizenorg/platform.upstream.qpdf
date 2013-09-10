@@ -1,0 +1,6 @@
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Wed, 07 Aug 2013 15:39:24 +0900
+  * Sync with private and rsa
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Fri, 14 Dec 2012 14:00:01 +0900
+  * Added spec file and smack manifest file
+ -- GangHeok Kim <gangheok.kim@samsung.com>  Fri, 14 Dec 2012 13:57:51 +0900
+  * Ported qpdf initially
