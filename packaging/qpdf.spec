@@ -41,6 +41,7 @@ for developing programs using the qpdf library.
 cp %{SOURCE1} .
 
 %build
+
 ./autogen.sh
 %configure --without-docdir
 
@@ -52,6 +53,7 @@ make check
 %install
 %make_install
 rm -rf %{buildroot}/%{_datadir}/doc/qpdf
+
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
@@ -61,7 +63,7 @@ rm -rf %{buildroot}/%{_datadir}/doc/qpdf
 %files
 %manifest %{name}.manifest
 %license Artistic-2.0 
-%{_bindir}/*
+%exclude %{_bindir}/*
 %exclude %{_mandir}/man1/*
 %{_libdir}/libqpdf*.so.*
 
