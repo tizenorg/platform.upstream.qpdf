@@ -26,7 +26,6 @@ existing PDF files.
 
 %package devel
 Summary:        Development files for qpdf PDF manipulation library
-Group:          Development/System
 Requires:       %{name} = %{version}
 Requires:       pkgconfig(libpcre)
 Requires:       pkgconfig(zlib)
@@ -53,6 +52,7 @@ make check
 %install
 %make_install
 rm -rf %{buildroot}/%{_datadir}/doc/qpdf
+rm  %{buildroot}/%{_bindir}/*
 
 %post -p /sbin/ldconfig
 
@@ -62,9 +62,7 @@ rm -rf %{buildroot}/%{_datadir}/doc/qpdf
 
 %files
 %manifest %{name}.manifest
-%license Artistic-2.0 
-%exclude %{_bindir}/*
-%exclude %{_mandir}/man1/*
+%license Artistic-2.0
 %{_libdir}/libqpdf*.so.*
 
 %files devel
